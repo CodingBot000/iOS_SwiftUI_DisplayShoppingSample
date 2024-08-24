@@ -1,0 +1,53 @@
+[
+    {
+        "id": "0",
+        "name": "Tesla Model",
+        "imageName": "square.and.arrow.up.fill"
+    },
+    {
+        "id": "1",
+        "name": "Niro Plus",
+        "imageName": "pencil.circle.fill"
+    },
+    {
+        "id": "2",
+        "name": "tucson",
+        "imageName": "eraser.fill"
+    },
+    {
+        "id": "3",
+        "name": "Ioniq6",
+        "imageName": "rectangle.and.pencil.and.ellipsis.rtl"
+    },
+    {
+        "id": "4",
+        "name": "Chevrolet",
+        "imageName": "pencil.and.outline"
+    },
+    
+    {
+        "id": "5",
+        "name": "Toyota Prius",
+        "imageName": "pencil.tip.crop.circle.badge.plus.fill"
+    },
+    {
+        "id": "6",
+        "name": "ModelTesl S",
+        "imageName": "lasso.badge.sparkles"
+    },
+    {
+        "id": "7",
+        "name": "Toyota Prius",
+        "imageName": "folder.circle.fill"
+    },
+    {
+        "id": "8",
+        "name": "new Sonata",
+        "imageName": "paperplane.circle"
+    },
+    {
+        "id": "9",
+        "name": "Chevrolet",
+        "imageName": "polishzlotysign.square"
+    }
+]
