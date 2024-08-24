@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-struct ReusableNavigationLink: View {
+struct ReusableNavigationLink<Destination: View, Content: View>: View {
+    let destination: Destination
+    let content: () -> Content
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(
+            destination: destination,
+            label: {
+                content()
+            }
+        )
     }
 }
 
+
 #Preview {
-    ReusableNavigationLink()
+    ReusableNavigationLink(destination: Text("Detail View")) {
+        Text("Click Me")
+    }
 }

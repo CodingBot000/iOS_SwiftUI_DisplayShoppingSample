@@ -14,7 +14,7 @@ struct DisplaySectionView: View {
     
     init(title: String) {
         self.title = title
-        viewModel.getDisplayItemDatas()
+        viewModel.getDisplayItemDatas(limit: 8)
     }
     
     
@@ -27,7 +27,7 @@ struct DisplaySectionView: View {
                 .padding(.leading, 10)
 
             
-            DisplayView(itemDatas: viewModel.displayItemDatas)
+            DisplayHorizontalView(itemDatas: viewModel.displayItemDatas)
             
 
         }
@@ -36,7 +36,7 @@ struct DisplaySectionView: View {
 }
 
 
-struct DisplayView: View {
+private struct DisplayHorizontalView: View {
     let itemDatas: [ProductData]
 
     var body: some View {
@@ -47,11 +47,10 @@ struct DisplayView: View {
                     let data = itemDatas[index]
                     NavigationLink(destination: DetailView(data:  data))
                     {
-                        DisplayItemView(
+                        DisplayHorizontalCell(
                             imageName: data.imageName,
                             name: data.name,
-                            subName: data.subName,
-                            selectedIdx: index
+                            subName: data.subName
                         )
                     }
                 }
@@ -59,3 +58,28 @@ struct DisplayView: View {
         }
     }
 }
+
+private struct DisplayHorizontalCell: View {
+    let imageName: String
+    let name: String
+    let subName: String
+
+    var body: some View {
+        VStack {
+            Image(imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, height: 100)
+                .clipped()
+
+            Text(name)
+                .font(.headline)
+            Text(subName)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+        }
+        .frame(width: 150)
+    }
+}
+
+

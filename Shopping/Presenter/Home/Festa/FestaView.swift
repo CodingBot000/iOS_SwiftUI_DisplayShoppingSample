@@ -9,7 +9,9 @@ import SwiftUI
 
 struct FestaView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Spacer(minLength: 10)
+        DisplayListSectionView(title: "Festa")
+        Spacer(minLength: 20)
     }
 }
 

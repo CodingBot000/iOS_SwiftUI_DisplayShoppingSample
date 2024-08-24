@@ -9,7 +9,19 @@ import SwiftUI
 
 struct RecommendView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+            BannerSliderView()
+            Spacer(minLength: 10)
+            ChipSectionView()
+            Spacer(minLength: 20)
+            DisplaySectionView(title: "Recommend")
+            Spacer(minLength: 20)
+            DisplaySectionView(title: "Street Style")
+            Spacer(minLength: 20)
+            DisplaySectionView(title: "Popular")
+            Spacer(minLength: 20)
+            DisplaySectionView(title: "Hello World")
+
     }
 }
 

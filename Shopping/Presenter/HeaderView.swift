@@ -8,15 +8,19 @@
 import SwiftUI
 
 
-
+enum HOME_HEADER_NAVI: String, CaseIterable {
+    case Recommend
+    case Brand
+    case Publish
+    case Ranking
+    case Sale
+    case Festa
+}
 
 struct HeaderView: View {
-    private let headerNavi = ["Recommend", "Brand", "Pusblished", "Ranking", "Sale", "BeautyFesta"]
-    @State var searchText: String
-    @State private var selectedTab: Int = 0
-    
+    @Binding var selectedSubTab: HOME_HEADER_NAVI
+
     var body: some View {
-        
             VStack {
                 HStack {
                     Text("SuperShopping")
@@ -32,27 +36,32 @@ struct HeaderView: View {
                         .foregroundColor(.white)
                     
                 }
+              
+                NavigationLink(destination: SearchView()) {
+                    SearchActionButtonView()
+                }
+                 
                 
-                SearchView()
-                
-                HStack(spacing: 10) {
-                    ForEach(0..<headerNavi.count, id: \.self) { i in
-                        HeadNaviTextView(text: headerNavi[i], textColor: selectedTab == i ? .white : .gray)
+                HStack(spacing: 0) {
+                    ForEach(HOME_HEADER_NAVI.allCases.indices, id: \.self) { index in
+                        let navItem = HOME_HEADER_NAVI.allCases[index]
+
+                        HeadNaviTextView(text: navItem.rawValue, textColor: selectedSubTab == navItem ? .white : .gray)
+                            .padding(.trailing, 8)
                             .onTapGesture {
-                                selectedTab = i
+                                selectedSubTab = navItem
+
                             }
                         
-                    }
-                    
+                        }
                 }
             }.padding()
 
-        .background(Color.black) // VStack의 배경색을 검은색으로 설정
-        .edgesIgnoringSafeArea(.all)
+        .background(Color.black)
     }
 }
 
-struct HeadNaviTextView: View {
+private struct HeadNaviTextView: View {
     let text: String
     let textColor: Color
     
@@ -61,13 +70,11 @@ struct HeadNaviTextView: View {
     var body: some View {
         Text(text)
             .foregroundColor(textColor)
-            .frame(width: 40) // 텍textColor스트 박스의 너비를 40으로 제한
-            .lineLimit(nil) // 텍스트가 여러 줄에 걸쳐 표시되도록 설정
-            .multilineTextAlignment(.leading)
+            .font(Font.system(size: 13, design: .serif))
     }
 }
 
-struct SearchView: View {
+private struct SearchActionButtonView: View {
     var body: some View {
         HStack {
             Text("Standard WorkWay")
@@ -76,13 +83,18 @@ struct SearchView: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
         }
+        .padding(10)
+        .frame(height: 40)
         .background(Color.white)
-
+        .cornerRadius(10)
     }
 }
-    
-struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeaderView(searchText: "aaa")
-    }
-}
+//    
+//struct HeaderView_Previews: PreviewProvider {
+//    let onSearchTapped: () -> Void
+//    
+//    static var previews: some View {
+//     
+//        HeaderView()
+//    }
+//}

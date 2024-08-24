@@ -6,3 +6,20 @@
 //
 
 import Foundation
+import Combine
+
+class ChipSectionViewModel: ObservableObject {
+    @Published var chipDatas: [[ChipData]] = []
+    private var chipDataRepository = ChipDataRepository()
+    
+    func getChipDatas() {
+        let tmpChipDatas = chipDataRepository.getChipDatas()
+        let halfSize = tmpChipDatas.count / 2
+
+        self.chipDatas = [
+            Array(tmpChipDatas[..<halfSize]),
+            Array(tmpChipDatas[halfSize...])
+        ]
+    }
+    
+}

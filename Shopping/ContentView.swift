@@ -8,16 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedBottomTab: BottomTabItem = .HOME
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ZStack(alignment: .bottom) {
+                ScrollView {
+                    switch selectedBottomTab {
+                        case .HOME:
+                            HomeView()
+                        case .POPULAR:
+                            PopularView()
+                        case .CATEGORY:
+                            CategoryView()
+                        case .FAVORITE:
+                            FavoriteView()
+                        case .MY_PAGE:
+                            MyPageView()
+                    }
+                    
+                }
+                
+                BottomTabBarView(selectedBottomTab: $selectedBottomTab)
+                    .frame(height: 50)
+            }
+            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0 + 44)
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()

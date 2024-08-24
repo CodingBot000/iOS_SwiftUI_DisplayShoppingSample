@@ -1,5 +1,5 @@
 //
-//  CategoryView.swift
+//  MyPageView.swift
 //  Shopping
 //
 //  Created by switchMac on 8/24/24.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct CategoryView: View {
+
+struct MyPageView: View {
     var body: some View {
-        Text("Category View")
+        Text("My Page View")
             .font(.largeTitle)
             .padding()
     }
@@ -17,5 +18,5 @@ struct CategoryView: View {
 
 
 #Preview {
-    CategoryView()
+    MyPageView()
 }

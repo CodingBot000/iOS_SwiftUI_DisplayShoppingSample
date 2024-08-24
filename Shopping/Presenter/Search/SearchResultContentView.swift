@@ -8,11 +8,37 @@
 import SwiftUI
 
 struct SearchResultContentView: View {
+    
+    @Binding var selectedItem: ProductData?
+    let products: [ProductData]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        LazyVStack {
+            ForEach(0..<products.count, id: \.self) { index in
+                let data = products[index]
+                NavigationLink(
+                    destination: DetailView(data: data) ,
+                    label: {
+                        SearchResultItemView(
+                            id: data.id,
+                            imageName: data.imageName,
+                            name: data.name,
+                            subName: data.subName
+
+                        )
+                    }
+                )
+            }
+            
+            .listRowSeparator(.hidden, edges: .all)
+            .listRowInsets(.init(top: 10, leading: 10,
+                                 bottom: 10, trailing: 10))
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .listStyle(.plain)
+        .navigationTitle("Search Result")
     }
 }
 
-#Preview {
-    SearchResultContentView()
-}
+

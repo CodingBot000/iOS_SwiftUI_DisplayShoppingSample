@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct SearchResultItemView: View {
+    let id: String
+    let imageName: String
+    let name: String
+    let subName: String
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        GroupBox {
+            HStack {
+                
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 150, height: 100)
+                    .clipped()
+                VStack {
+                    Text(name)
+                        .font(.headline)
+                    Text(subName)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    Text(id)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+            }.frame(maxWidth: .infinity, alignment: .trailing)
 
-#Preview {
-    SearchResultItemView()
+        }.padding(0)
+    }
 }
