@@ -27,12 +27,13 @@ struct SearchView: View {
                             .fontWeight(.bold)
                             .font(.largeTitle)
                             .foregroundColor(.gray.opacity(0.3))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                      } else {
                          Text("No Data")
                              .fontWeight(.bold)
                              .font(.largeTitle)
                              .foregroundColor(.red.opacity(0.3))
-                         
+                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     }
                     
                 }

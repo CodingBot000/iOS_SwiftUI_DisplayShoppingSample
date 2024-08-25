@@ -10,7 +10,7 @@ import Combine
 
 class BannerViewModel: ObservableObject {
     @Published var banners: [ProductData] = []
-    var bannerRepository = BannersRepository.shared
+    private var bannerRepository = BannersRepository.shared
         
     func getBannerDatas() {
         self.banners = bannerRepository.getBanners()

@@ -8,16 +8,9 @@
 import SwiftUI
 
 struct DisplaySectionView: View {
-
     @ObservedObject private var viewModel: DisplayItemsViewModel = DisplayItemsViewModel()
     var title: String
-    
-    init(title: String) {
-        self.title = title
-        viewModel.getDisplayItemDatas(limit: 8)
-    }
-    
-    
+
     var body: some View {
         VStack {
             Text(title)
@@ -30,6 +23,8 @@ struct DisplaySectionView: View {
             DisplayHorizontalView(itemDatas: viewModel.displayItemDatas)
             
 
+        }.onAppear {
+            viewModel.getDisplayItemDatas(limit: 8)
         }
     }
     

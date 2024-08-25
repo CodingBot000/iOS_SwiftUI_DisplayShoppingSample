@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DetailView: View {
     let data: ProductData
-    
+    @ObservedObject private var viewModel: DetailViewViewModel = DetailViewViewModel()
+ 
     var body: some View {
       
            VStack {
@@ -56,11 +57,25 @@ struct DetailView: View {
                        .fontSize(size: 20)
                        .padding(.bottom, 10)
                }
-               .padding(.horizontal, 10) // 좌우로 10포인트의 패딩 추가
+               .padding(.horizontal, 10) 
            }
        }
        .navigationTitle(data.name)
+       .navigationBarItems(trailing:
+            Button(action: {
+                viewModel.onClickFavoriteItem(id: data.id)
+                }) {
+                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                    .padding(.trailing, 8)
+                    .padding(.bottom, 18)
+                    .frame(width: 34, height: 34)
+            }
+        )
+       .onAppear {
+           viewModel.getIsFavorite(id: data.id)
+       }
    }
+
 }
 
 
