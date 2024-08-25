@@ -13,24 +13,28 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottom) {
-                ScrollView {
+                VStack {
+                    //                ScrollView {
                     switch selectedBottomTab {
-                        case .HOME:
-                            HomeView()
-                        case .POPULAR:
-                            PopularView()
-                        case .CATEGORY:
-                            CategoryView()
-                        case .FAVORITE:
-                            FavoriteView()
-                        case .MY_PAGE:
-                            MyPageView()
+                    case .HOME:
+                        HomeView()
+                        //                            CategoryView()
+                    case .POPULAR:
+                        PopularView()
+                    case .CATEGORY:
+                        CategoryView()
+                    case .FAVORITE:
+                        FavoriteView()
+                    case .MY_PAGE:
+                        MyPageView()
+                        //                            HomeView()
+                        //                    }
+                        
                     }
                     
+                    BottomTabBarView(selectedBottomTab: $selectedBottomTab)
+                        .frame(height: 50, alignment: .bottom)
                 }
-                
-                BottomTabBarView(selectedBottomTab: $selectedBottomTab)
-                    .frame(height: 50)
             }
             .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0 + 44)
         }

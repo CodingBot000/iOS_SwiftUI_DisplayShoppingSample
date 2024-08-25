@@ -18,17 +18,18 @@ struct SearchResultContentView: View {
             ForEach(0..<products.count, id: \.self) { index in
                 let data = products[index]
                 NavigationLink(
-                    destination: DetailView(data: data) ,
-                    label: {
-                        SearchResultItemView(
-                            id: data.id,
-                            imageName: data.imageName,
-                            name: data.name,
-                            subName: data.subName
+                    destination: DetailView(data: data))
+                {
+                    DisplayListCell(
+                        imageName: data.imageName,
+                        name: data.name,
+                        subName: data.subName,
+                        manufacturer: data.manufacturer
+                    )
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(10)
 
-                        )
-                    }
-                )
+                }
             }
             
             .listRowSeparator(.hidden, edges: .all)

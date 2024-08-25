@@ -33,7 +33,7 @@ struct BottomTabBarView: View {
             Button(action: {
                 selectedBottomTab = .POPULAR
             }) {
-                Image(systemName: selectedBottomTab == .POPULAR ? "star.circle.fill" : "star.circle")
+                Image(systemName: selectedBottomTab == .POPULAR ? "newspaper.circle.fill" : "newspaper.circle")
                     .foregroundColor(selectedBottomTab == .POPULAR ? .black : .gray)
             }
             Spacer()

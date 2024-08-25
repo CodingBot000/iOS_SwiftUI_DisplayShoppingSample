@@ -10,9 +10,15 @@ import SwiftUI
 
 struct FavoriteView: View {
     var body: some View {
-        Text("FavoriteView")
-            .font(.largeTitle)
-            .padding()
+        VStack {
+            
+            Text("FavoriteView")
+                .font(.largeTitle)
+                .padding()
+            Text("Plan to implement this using Core Data.")
+                .font(.footnote)
+                .padding()
+        }.frame(maxWidth: .infinity, maxHeight: .infinity )
     }
 }
 

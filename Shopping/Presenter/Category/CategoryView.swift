@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct CategoryView: View {
+    private let urlStr = "https://www.kia.com/us/en/vehicles"
+
     var body: some View {
-        Text("Category View")
-            .font(.largeTitle)
-            .padding()
+        if let url = URL(string: urlStr) {
+            WebViewScreen(url: url, title: "Category")
+        } else {
+            Text("Invalid URL")
+                .foregroundColor(.red)
+        }
     }
 }
 

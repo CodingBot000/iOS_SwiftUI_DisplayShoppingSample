@@ -56,7 +56,7 @@ struct DetailView: View {
                        .fontSize(size: 20)
                        .padding(.bottom, 10)
                }
-               .padding(.horizontal, 10) 
+               .padding(.horizontal, 10) // 좌우로 10포인트의 패딩 추가
            }
        }
        .navigationTitle(data.name)

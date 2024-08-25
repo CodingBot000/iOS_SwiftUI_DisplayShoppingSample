@@ -10,9 +10,13 @@ import SwiftUI
 
 struct MyPageView: View {
     var body: some View {
-        Text("My Page View")
-            .font(.largeTitle)
-            .padding()
+        VStack {
+            Text("My Page View")
+                .font(.largeTitle)
+                .padding()
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity )
     }
 }
 

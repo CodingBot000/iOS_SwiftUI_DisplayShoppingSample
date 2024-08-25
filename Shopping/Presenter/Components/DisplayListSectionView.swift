@@ -58,7 +58,7 @@ struct DisplayListView: View {
 }
 
 
-private struct DisplayListCell: View {
+struct DisplayListCell: View {
     let imageName: String
     let name: String
     let subName: String

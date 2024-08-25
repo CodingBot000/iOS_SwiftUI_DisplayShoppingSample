@@ -37,7 +37,6 @@
 		57E927CA2C786AB2006F19AC /* BannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E927C82C786AB2006F19AC /* BannerData.swift */; };
 		57E928042C788158006F19AC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E928032C788158006F19AC /* CustomTextField.swift */; };
 		57E928062C7884B2006F19AC /* SearchResultContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E928052C7884B2006F19AC /* SearchResultContentView.swift */; };
-		57E9280B2C788FEA006F19AC /* SearchResultItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9280A2C788FEA006F19AC /* SearchResultItemView.swift */; };
 		57E9280E2C78938B006F19AC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9280D2C78938B006F19AC /* DetailView.swift */; };
 		57E9281B2C78A9A4006F19AC /* ReusableNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9281A2C78A9A4006F19AC /* ReusableNavigationLink.swift */; };
 		57E928232C78F46E006F19AC /* WebViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E928222C78F46E006F19AC /* WebViewScreen.swift */; };
@@ -109,7 +108,6 @@
 		57E927C82C786AB2006F19AC /* BannerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
 		57E928032C788158006F19AC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		57E928052C7884B2006F19AC /* SearchResultContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultContentView.swift; sourceTree = "<group>"; };
-		57E9280A2C788FEA006F19AC /* SearchResultItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItemView.swift; sourceTree = "<group>"; };
 		57E9280D2C78938B006F19AC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		57E9281A2C78A9A4006F19AC /* ReusableNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableNavigationLink.swift; sourceTree = "<group>"; };
 		57E928222C78F46E006F19AC /* WebViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScreen.swift; sourceTree = "<group>"; };
@@ -128,6 +126,7 @@
 		57E928512C7A3986006F19AC /* FestaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestaView.swift; sourceTree = "<group>"; };
 		57E928532C7A3D12006F19AC /* DisplayListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayListSectionView.swift; sourceTree = "<group>"; };
 		57E928552C7A4A4A006F19AC /* ChipDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipDataRepository.swift; sourceTree = "<group>"; };
+		57E9285B2C7B1738006F19AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +177,7 @@
 		57E927592C770788006F19AC /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				57E9285B2C7B1738006F19AC /* Info.plist */,
 				57E9278C2C771154006F19AC /* Data */,
 				57E927842C7707C5006F19AC /* Presenter */,
 				57E927BB2C77B3EA006F19AC /* ViewModel */,
@@ -323,7 +323,6 @@
 			children = (
 				57E9281A2C78A9A4006F19AC /* ReusableNavigationLink.swift */,
 				57E928222C78F46E006F19AC /* WebViewScreen.swift */,
-				57E9280A2C788FEA006F19AC /* SearchResultItemView.swift */,
 				57E927882C77109D006F19AC /* BannerSliderView.swift */,
 				57E927962C77240B006F19AC /* ChipSectionView.swift */,
 				57E927AC2C774023006F19AC /* DisplaySectionView.swift */,
@@ -590,7 +589,6 @@
 				57E928382C79DD27006F19AC /* Extensions.swift in Sources */,
 				57E927BF2C77BB08006F19AC /* DataStores.swift in Sources */,
 				57E927B12C776CDB006F19AC /* Colors.swift in Sources */,
-				57E9280B2C788FEA006F19AC /* SearchResultItemView.swift in Sources */,
 				57E928232C78F46E006F19AC /* WebViewScreen.swift in Sources */,
 				57E9280E2C78938B006F19AC /* DetailView.swift in Sources */,
 				57E9281B2C78A9A4006F19AC /* ReusableNavigationLink.swift in Sources */,
@@ -768,6 +766,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Shopping/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shopping/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -795,6 +794,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Shopping/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shopping/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
