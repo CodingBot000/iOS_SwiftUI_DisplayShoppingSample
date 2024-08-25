@@ -14,11 +14,9 @@ struct ContentView: View {
         NavigationStack {
             ZStack(alignment: .bottom) {
                 VStack {
-                    //                ScrollView {
                     switch selectedBottomTab {
                     case .HOME:
                         HomeView()
-                        //                            CategoryView()
                     case .POPULAR:
                         PopularView()
                     case .CATEGORY:
@@ -27,9 +25,6 @@ struct ContentView: View {
                         FavoriteView()
                     case .MY_PAGE:
                         MyPageView()
-                        //                            HomeView()
-                        //                    }
-                        
                     }
                     
                     BottomTabBarView(selectedBottomTab: $selectedBottomTab)

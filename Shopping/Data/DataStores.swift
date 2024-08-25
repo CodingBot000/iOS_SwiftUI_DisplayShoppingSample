@@ -8,7 +8,7 @@
 import Foundation
 
 final class DataStores {
-    private static var productDatas: [ProductData] = []  // 배열을 var로 변경
+    private static var productDatas: [ProductData] = []  
     
     static func getProductDatas() -> [ProductData] {
         return buidProductDatas()
