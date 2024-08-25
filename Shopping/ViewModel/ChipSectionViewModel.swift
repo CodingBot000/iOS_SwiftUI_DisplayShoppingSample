@@ -10,7 +10,7 @@ import Combine
 
 class ChipSectionViewModel: ObservableObject {
     @Published var chipDatas: [[ChipData]] = []
-    private var chipDataRepository = ChipDataRepository()
+    private var chipDataRepository = ChipDataRepository.shared
     
     func getChipDatas() {
         let tmpChipDatas = chipDataRepository.getChipDatas()

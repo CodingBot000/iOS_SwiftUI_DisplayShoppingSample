@@ -11,7 +11,7 @@ import Combine
 
 class DisplayItemsViewModel: ObservableObject {
     @Published var displayItemDatas: [ProductData] = []
-    private var displayItemRepository = DisplayItemRepository()
+    private var displayItemRepository = DisplayItemRepository.shared
     
     func getDisplayItemDatas(limit: Int = 0) {
         self.displayItemDatas = displayItemRepository.getDisplayItemDatas(limit: 0)

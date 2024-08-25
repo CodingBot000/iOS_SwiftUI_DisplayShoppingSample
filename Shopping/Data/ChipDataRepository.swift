@@ -8,6 +8,10 @@
 import SwiftUI
 
 class ChipDataRepository {
+    static let shared = ChipDataRepository()
+    
+    private init() {}
+    
     func getChipDatas() -> [ChipData] {
         return DataStores.getChipDatas()
     }

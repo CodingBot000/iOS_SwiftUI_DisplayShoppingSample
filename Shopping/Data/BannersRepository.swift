@@ -8,6 +8,9 @@
 import Foundation
 
 class BannersRepository {
+    static let shared = BannersRepository()
+    
+    private init() {}
     
     func getBanners() -> [ProductData]
     {
