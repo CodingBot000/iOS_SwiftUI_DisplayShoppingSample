@@ -11,10 +11,6 @@ struct ChipSectionView: View {
 
     @ObservedObject private var viewModel: ChipSectionViewModel = ChipSectionViewModel()
 
-    init() {
-        viewModel.getChipDatas()
-    }
-
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             VStack(spacing: 3) {
@@ -38,6 +34,9 @@ struct ChipSectionView: View {
                 }
             }
         
+        }
+        .onAppear {
+            viewModel.getChipDatas()
         }
     }
     
