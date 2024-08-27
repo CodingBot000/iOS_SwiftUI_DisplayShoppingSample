@@ -20,32 +20,41 @@ struct HomeView: View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 
-                HeaderView(selectedSubTab: $selectedSubTab)
-                
-                switch selectedSubTab {
-                case .Recommend:
-                    RecommendView()
-                case .Brand:
-                    BrandView()
-                case .Publish:
-                    PublishView()
-                case .Ranking:
-                    RankingView()
-                case .Sale:
-                    SaleView()
-                case .Festa:
-                    FestaView()
-                }
-                
+                HeaderView(selectedSubTab: $selectedSubTab)                
+                MainContentView(selectedSubTab: $selectedSubTab)
+
+                Text("Hello World .Corp")
+                    .frame(maxWidth: .infinity, minHeight: 70 )
+                    .foregroundColor(gray10)
+                    .background(.gray)
             }
-            Text("Hello World .Corp")
-                .frame(maxWidth: .infinity, minHeight: 70 )
-                .foregroundColor(gray10)
-                .background(.gray)
+            .background(baseBackground)
         }
-        .background(baseBackground)
+    }
+}
+
+struct MainContentView: View {
+    @Binding var selectedSubTab: HOME_HEADER_NAVI
+    
+    var body: some View {
+ 
+        switch selectedSubTab {
+            case .Recommend:
+                RecommendView()
+            case .Brand:
+                BrandView()
+            case .Publish:
+                PublishView()
+            case .Ranking:
+                RankingView()
+            case .Sale:
+                SaleView()
+            
+        }
+
 
     }
+    
 }
 
 

@@ -14,7 +14,6 @@ enum HOME_HEADER_NAVI: String, CaseIterable {
     case Publish
     case Ranking
     case Sale
-    case Festa
 }
 
 struct HeaderView: View {
@@ -41,38 +40,59 @@ struct HeaderView: View {
                     SearchActionButtonView()
                 }
                  
-                
-                HStack(spacing: 0) {
-                    ForEach(HOME_HEADER_NAVI.allCases.indices, id: \.self) { index in
-                        let navItem = HOME_HEADER_NAVI.allCases[index]
-
-                        HeadNaviTextView(text: navItem.rawValue, textColor: selectedSubTab == navItem ? .white : .gray)
-                            .padding(.trailing, 8)
-                            .onTapGesture {
-                                selectedSubTab = navItem
-
-                            }
-                        
-                        }
-                }
+                HeadNaviView(selectedSubTab: $selectedSubTab)
             }.padding()
 
         .background(Color.black)
     }
 }
 
+
+private struct HeadNaviView: View {
+    @Binding var selectedSubTab: HOME_HEADER_NAVI
+
+    var body: some View {
+        HStack(spacing: 0) {
+            ForEach(HOME_HEADER_NAVI.allCases.indices, id: \.self) { index in
+                let navItem = HOME_HEADER_NAVI.allCases[index]
+
+                HeadNaviTextView(text: navItem.rawValue, textColor: selectedSubTab == navItem ? .white : .gray)
+                    .padding(.trailing, 8)
+                    .onTapGesture {
+                        selectedSubTab = navItem
+
+                    }
+                
+                }
+        }
+    }
+}
+
+
 private struct HeadNaviTextView: View {
     let text: String
     let textColor: Color
-    
-    @State private var selected: Bool = false
-
+ 
     var body: some View {
         Text(text)
             .foregroundColor(textColor)
             .font(Font.system(size: 13, design: .serif))
     }
 }
+
+//
+//private struct HeadNaviTextView: View {
+//    let text: String
+//    let textColor: Color
+//    
+//    @State private var selected: Bool = false
+//
+//    var body: some View {
+//        Text(text)
+//            .foregroundColor(textColor)
+//            .font(Font.system(size: 13, design: .serif))
+//    }
+//}
 
 private struct SearchActionButtonView: View {
     var body: some View {

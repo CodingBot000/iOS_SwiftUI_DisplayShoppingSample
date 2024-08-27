@@ -52,7 +52,6 @@
 		57E9284C2C7A3968006F19AC /* PublishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9284B2C7A3968006F19AC /* PublishView.swift */; };
 		57E9284E2C7A3972006F19AC /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9284D2C7A3972006F19AC /* RankingView.swift */; };
 		57E928502C7A397B006F19AC /* SaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9284F2C7A397B006F19AC /* SaleView.swift */; };
-		57E928522C7A3986006F19AC /* FestaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E928512C7A3986006F19AC /* FestaView.swift */; };
 		57E928542C7A3D12006F19AC /* DisplayListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E928532C7A3D12006F19AC /* DisplayListSectionView.swift */; };
 		57E928562C7A4A4A006F19AC /* ChipDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E928552C7A4A4A006F19AC /* ChipDataRepository.swift */; };
 		57E928632C7B2597006F19AC /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E928612C7B2596006F19AC /* Favorite.xcdatamodeld */; };
@@ -128,7 +127,6 @@
 		57E9284B2C7A3968006F19AC /* PublishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishView.swift; sourceTree = "<group>"; };
 		57E9284D2C7A3972006F19AC /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		57E9284F2C7A397B006F19AC /* SaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleView.swift; sourceTree = "<group>"; };
-		57E928512C7A3986006F19AC /* FestaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestaView.swift; sourceTree = "<group>"; };
 		57E928532C7A3D12006F19AC /* DisplayListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayListSectionView.swift; sourceTree = "<group>"; };
 		57E928552C7A4A4A006F19AC /* ChipDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipDataRepository.swift; sourceTree = "<group>"; };
 		57E9285B2C7B1738006F19AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 		57E927852C7707EA006F19AC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				57E928452C7A37BB006F19AC /* Festa */,
 				57E928442C7A37B7006F19AC /* Sale */,
 				57E928432C7A37B2006F19AC /* Ranking */,
 				57E928422C7A37AD006F19AC /* Publish */,
@@ -435,14 +432,6 @@
 			path = Sale;
 			sourceTree = "<group>";
 		};
-		57E928452C7A37BB006F19AC /* Festa */ = {
-			isa = PBXGroup;
-			children = (
-				57E928512C7A3986006F19AC /* FestaView.swift */,
-			);
-			path = Festa;
-			sourceTree = "<group>";
-		};
 		57E928642C7B26A1006F19AC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,7 +593,6 @@
 				57E927872C770800006F19AC /* HeaderView.swift in Sources */,
 				57E9286C2C7B30E2006F19AC /* DetailViewViewModel.swift in Sources */,
 				57E928502C7A397B006F19AC /* SaleView.swift in Sources */,
-				57E928522C7A3986006F19AC /* FestaView.swift in Sources */,
 				57E927972C77240B006F19AC /* ChipSectionView.swift in Sources */,
 				57E927C32C77BF1E006F19AC /* DisplayItemsViewModel.swift in Sources */,
 				57E9284A2C7A3957006F19AC /* BrandView.swift in Sources */,
