@@ -21,3 +21,5 @@ The application does not have a server, and the JSON data is hardcoded locally. 
 - CoreData for storing favorite items
 - MVVM Architecture
 
+## Project Structure
+![Alt text](https://github.com/CodingBot000/DisplayShoppingSample_iOS/blob/main/Shopping_IOS_View.drawio.png)
