@@ -1,53 +1,48 @@
 [
     {
         "id": "0",
-        "name": "Tesla Model",
+        "name": "Comfortable",
         "imageName": "square.and.arrow.up.fill"
     },
     {
         "id": "1",
-        "name": "Niro Plus",
+        "name": "Sophisticated",
         "imageName": "pencil.circle.fill"
     },
     {
         "id": "2",
-        "name": "tucson",
+        "name": "Dynamic",
         "imageName": "eraser.fill"
     },
     {
         "id": "3",
-        "name": "Ioniq6",
+        "name": "Luxurious",
         "imageName": "rectangle.and.pencil.and.ellipsis.rtl"
     },
     {
         "id": "4",
-        "name": "Chevrolet",
+        "name": "Innovative",
         "imageName": "pencil.and.outline"
     },
     
     {
         "id": "5",
-        "name": "Toyota Prius",
+        "name": "Powerful",
         "imageName": "pencil.tip.crop.circle.badge.plus.fill"
     },
     {
         "id": "6",
-        "name": "ModelTesl S",
+        "name": "Safe",
         "imageName": "lasso.badge.sparkles"
     },
     {
         "id": "7",
-        "name": "Toyota Prius",
+        "name": "Efficient",
         "imageName": "folder.circle.fill"
     },
     {
         "id": "8",
-        "name": "new Sonata",
+        "name": "Eco-friendly",
         "imageName": "paperplane.circle"
-    },
-    {
-        "id": "9",
-        "name": "Chevrolet",
-        "imageName": "polishzlotysign.square"
     }
 ]
